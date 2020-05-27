@@ -10,6 +10,12 @@
 #include <direct.h>
 #include <math.h>
 #include <array> 
+#include <face.cpp> 
+#include <inpoutp.cpp>
+#include <main.cpp>
+#include <riemannFlux.cpp>
+#include <supportFunct.cpp>
+#include <wetDry.cpp>
 
 // time loop
 void timeLoop(ArrayGen(dpreal)& u, ArrayGen(dpreal)& v, ArrayGen(dpreal)& h, ArrayGen(dpreal)& eta, ArrayGen(dpreal)& zb, ArrayGen(dpreal)& man,

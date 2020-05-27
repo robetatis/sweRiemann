@@ -9,7 +9,8 @@
 #include <string>
 #include <direct.h>
 #include <math.h>
-#include <array> 
+#include <array>
+#include <supportFunct.cpp>
 
 // min-mod slope limiter
 inline void minMod(Vec(dpreal)& inVect, dpreal& limslope)

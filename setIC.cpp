@@ -9,7 +9,9 @@
 #include <string>
 #include <direct.h>
 #include <math.h>
-#include <array> 
+#include <array>
+#include <supportFunct.cpp>
+#include <inpoutp.cpp>
 
 // set initial conditions on state variables: eta, u and v are read from ASCII raster, then h simply computed as eta - zb
 void setIC(ArrayGen(dpreal)& h, ArrayGen(dpreal)& eta, ArrayGen(dpreal)& zb,

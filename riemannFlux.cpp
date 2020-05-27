@@ -9,7 +9,8 @@
 #include <string>
 #include <direct.h>
 #include <math.h>
-#include <array> 
+#include <array>
+#include <supportFunct.cpp>
 
 // compute face fluxes in x-direction, HLLC approximate Riemann solver
 inline void xFlux(Vec(dpreal)& Fface,																									

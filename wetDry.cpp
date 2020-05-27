@@ -9,8 +9,8 @@
 #include <string>
 #include <direct.h>
 #include <math.h>
-#include <array> 
-
+#include <array>
+#include <supportFunct.cpp>
 
 // wetting-drying according to Liang (2010)
 inline void wetDry(dpreal& etaL, dpreal& etaR, 

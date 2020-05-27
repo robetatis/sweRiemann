@@ -10,6 +10,11 @@
 #include <direct.h>
 #include <math.h>
 #include <array> 
+#include <inpoutp.cpp>
+#include <setBC.cpp>
+#include <setIC.cpp>
+#include <supportFunct.cpp>
+#include <timeLoop.cpp>
 
 // 2D FV solver for inviscid shallow water equations on a Cartesian grid (Liang and Borthwick 2009, Liang 2010)
 

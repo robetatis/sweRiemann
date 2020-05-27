@@ -9,7 +9,8 @@
 #include <string>
 #include <direct.h>
 #include <math.h>
-#include <array> 
+#include <array>
+#include <supportFunct.cpp>
 
 // set boundary conditions according to BC file; default mode is closed boundary
 void setBC(dpreal& dx, dpreal& dy, dpreal& xll, dpreal& yll, int& nx, int& ny, dpreal& tstop,
