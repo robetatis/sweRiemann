@@ -59,6 +59,7 @@ These are ASCII text files describing the boundary conditions and the configurat
 Since the model is raster-based, there are four domain boundaries: north (N), south (S), east (E) and west (W). Along each domain boundary there can be as many boundary segments of different types as required. For instance:
 
 ![Boundary segments](https://github.com/robetatis/sweRiemann/blob/master/bc.png)
+
 Blue: water level boundary segments, green: discharge boundary segments, black: closed boundary segments.
 
 By default, all model boundaries are closed and only those segments indicated in the boundary conditions file will be either open, have a discharge or a water level. Information must be provided for open, discharge or water level boundaries. If nothing is entered, the corresponding model boundary is treated as closed. 
@@ -69,6 +70,7 @@ Keywords:
 - open: open (transmissive) boundary
 
 The boundary conditions text file must have the following format:
+
 ![Boundary condition file format](https://github.com/robetatis/sweRiemann/blob/master/bcFile.png)
 
 Each line in this file corresponds to a boundary segment. The first line must contain column names. This is simply a header for identfying columns. Columns are read and interpreted based on position, not name!
@@ -88,3 +90,27 @@ points to file “eta.txt”. This file must also be in the same folder. Make su
 The format for the time series file is very simple:
 
 ![Time series file format](https://github.com/robetatis/sweRiemann/blob/master/bcTimeSeries.png)
+
+The 1st line is simply a header, NOT used for identification. The 1st column contains the time in seconds. The 2nd column contains the value of the variable. The time series is interpolated to the model’s computational time steps automatically, such that only inflection points in the curve must be provided. There must be one time series file per boundary segment.
+
+o	Control file: contains all run control parameters. The ordering of the lines in this file is fixed. Keywords in this file are only a guide for the user, as they are not really used for the assignment of parameter values.
+tstop	Simulation duration, in seconds
+dt	Time step, in seconds
+Ctolup	Maximum tolerable Courant number
+Ctollow	Minimum tolerable Courant number
+outprf	Ouput frequency of results files, in seconds
+outpc	Output frequency for console, in seconds
+demfile	Name of terrain ASCII file
+bcfile	Name of boundary conditions file
+etaicfile	Name of initial water level ASCII file. It can be the same as the terrain for a dry start. Cannot be “no”.
+uicfile	Name of ASCII file containing initial x-velocity component. This is optional, i.e., if not provided, all initial x-velocities are set to zero. In this case, “no” must be entered (case sensitive)
+vicfile	Name of ASCII file containing y-velocity component. This is optional, i.e., if not provided, all initial u-velocities are set to zero. In this case, “no” must be entered (case sensitive)
+manfile	Name of Manning ASCII file
+rfpre	Results file prefix. This is simply a root for the name of result files.
+outdir	Name of results directory. All output files will be written here
+hout	“yes” or “no” for controlling output of water depth
+etaout	“yes” or “no” for controlling output of water level
+vout	“yes” or “no” for controlling output of v-velocity component
+uout	“yes” or “no” for controlling output of u-velocity component
+vmagout	“yes” or “no” for controlling output of velocity magnitude, √(u2 + v2)
+flowdout	“yes” or “no” for controlling output of flow direction in degrees
