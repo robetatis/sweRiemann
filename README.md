@@ -93,7 +93,7 @@ Since the model is raster-based, there are four domain boundaries: north (N), so
 
 The 1st line is simply a header, not used for identification. The 1st column contains the time in seconds. The 2nd column contains the value of the variable. The time series is interpolated to the model’s computational time steps automatically, such that only inflection points in the curve must be provided. There must be one time series file per boundary segment.
 
-- Control file: contains all run control parameters. The ordering of the lines in this file is fixed. Keywords in this file are only a guide for the user, as they are not really used for the assignment of parameter values.
+- Control file: this file contains all run control parameters. The ordering of the lines in this file is fixed. Keywords in this file are only a guide for the user, as they are not really used for the assignment of parameter values.
   - tstop	Simulation duration, in seconds
   - dt	Time step, in seconds
   - Ctolup	Maximum tolerable Courant number
