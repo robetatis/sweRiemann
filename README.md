@@ -18,7 +18,7 @@ The code makes use of the [Diffpack library](http://diffpack.de/), mostly concer
 - Unit system: SI (meter, second, kg)
 - Comments are not yet allowed in any of the input files.
 - All input files must be in the same folder. All file names given by the user must have extension.
-- The only fixed file name is that of the control file  “control.txt”
+- The only fixed file name is that of the control file “control.txt”
 - The model can be started through a batch file with the following content:
   swRiemann.exe
   pause
