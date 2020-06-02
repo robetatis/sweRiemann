@@ -96,21 +96,21 @@ The 1st line is simply a header, not used for identification. The 1st column con
 - Control file: contains all run control parameters. The ordering of the lines in this file is fixed. Keywords in this file are only a guide for the user, as they are not really used for the assignment of parameter values.
   - tstop	Simulation duration, in seconds
   - dt	Time step, in seconds
-- Ctolup	Maximum tolerable Courant number
-- Ctollow	Minimum tolerable Courant number
-- outprf	Ouput frequency of results files, in seconds
-- outpc	Output frequency for console, in seconds
-- demfile	Name of terrain ASCII file
-- bcfile	Name of boundary conditions file
-- etaicfile	Name of initial water level ASCII file. It can be the same as the terrain for a dry start. Cannot be “no”.
-- uicfile	Name of ASCII file containing initial x-velocity component. This is optional, i.e., if not provided, all initial x-velocities are set to zero. In this case, “no” must be entered (case sensitive)
-- vicfile	Name of ASCII file containing y-velocity component. This is optional, i.e., if not provided, all initial u-velocities are set to zero. In this case, “no” must be entered (case sensitive)
-- manfile	Name of Manning ASCII file
-- rfpre	Results file prefix. This is simply a root for the name of result files.
-- outdir	Name of results directory. All output files will be written here
-- hout	“yes” or “no” for controlling output of water depth
-- etaout	“yes” or “no” for controlling output of water level
-- vout	“yes” or “no” for controlling output of v-velocity component
-- uout	“yes” or “no” for controlling output of u-velocity component
-- vmagout	“yes” or “no” for controlling output of velocity magnitude, √(u2 + v2)
-- flowdout	“yes” or “no” for controlling output of flow direction in degrees
+  - Ctolup	Maximum tolerable Courant number
+  - Ctollow	Minimum tolerable Courant number
+  - outprf	Ouput frequency of results files, in seconds
+  - outpc	Output frequency for console, in seconds
+  - demfile	Name of terrain ASCII file
+  - bcfile	Name of boundary conditions file
+  - etaicfile	Name of initial water level ASCII file. It can be the same as the terrain for a dry start. Cannot be “no”.
+  - uicfile	Name of ASCII file containing initial x-velocity component. This is optional, i.e., if not provided, all initial x-velocities are set to zero. In this case, “no” must be entered (case sensitive)
+  - vicfile	Name of ASCII file containing y-velocity component. This is optional, i.e., if not provided, all initial u-velocities are set to zero. In this case, “no” must be entered (case sensitive)
+  - manfile	Name of Manning ASCII file
+  - rfpre	Results file prefix. This is simply a root for the name of result files.
+  - outdir	Name of results directory. All output files will be written here
+  - hout	“yes” or “no” for controlling output of water depth
+  - etaout	“yes” or “no” for controlling output of water level
+  - vout	“yes” or “no” for controlling output of v-velocity component
+  - uout	“yes” or “no” for controlling output of u-velocity component
+  - vmagout	“yes” or “no” for controlling output of velocity magnitude, √(u2 + v2)
+  - flowdout	“yes” or “no” for controlling output of flow direction in degrees
