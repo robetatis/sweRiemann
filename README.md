@@ -38,7 +38,7 @@ The code makes use of the [Diffpack library](http://diffpack.de/), mostly concer
   - Initial x-velocity component (optional)
   - Initial y-velocity component (optional)
 
-![File format]:(https://github.com/robetatis/sweRiemann/blob/master/fileFormat.png)
+![File format](https://github.com/robetatis/sweRiemann/blob/master/fileFormat.png)
 
   File header:
     - NCOLS: number of columns
@@ -54,5 +54,15 @@ The code makes use of the [Diffpack library](http://diffpack.de/), mostly concer
 - Boundary conditions: the model works with *open* (transmissive), *closed* (reflective), *discharge* or *water level* boundary conditions. 
 Since the model is raster-based, there are four domain boundaries: north (N), south (S), east (E) and west (W). Along each domain boundary there can be as many boundary segments of different types as required. For instance:
 
-![Boundary segments]:(https://github.com/robetatis/sweRiemann/blob/master/bc.png)
+![Boundary segments](https://github.com/robetatis/sweRiemann/blob/master/bc.png)
 Blue: water level boundary segments, green: discharge boundary segments, black: closed boundary segments.
+
+By default, all model boundaries are closed and only those segments indicated in the boundary conditions file will be either open, have a discharge or a water level. Information must be provided for open, discharge or water level boundaries. If nothing is entered, the corresponding model boundary is treated as closed. 
+
+Keywords:
+- Q: flow boundary
+- eta: water level boundary
+- open: open (transmissive) boundary
+
+![File format](https://github.com/robetatis/sweRiemann/blob/master/bcFile.png)
+
