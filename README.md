@@ -33,6 +33,6 @@ The code makes use of the [Diffpack library](http://diffpack.de/), mostly concer
   - Initial x-velocity component (optional)
   - Initial y-velocity component (optional)
 
-![File format]:(https://octodex.github.com/images/yaktocat.png)
+![File format]:(https://github.com/robetatis/sweRiemann/blob/master/fileFormat.png)
 
 
