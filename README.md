@@ -10,7 +10,7 @@ Technische Universität  Dresden
 
 ## General information:
 
-This code implements a combination of the approaches proposed by Liang and Borthwick (2009) and Liang (2010) for solving the inviscid 2d shallow water equations with wetting and drying on a Cartesian grid. It uses raster files as input for bottom elevation (z), Manning roughness (n) and initial conditions for water level (eta), x-velocity (u), y-velocity (v) (last two optional), and simple text files for the control file and boundary conditions. Outputs are also in raster format.
+This code implements a combination of the approaches proposed by Liang and Borthwick (2009) and Liang (2010) for solving the inviscid 2d shallow water equations with wetting and drying on a Cartesian grid. Face fluxes are computed using an HLLC approximate Riemann solver. The model uses raster files as input for bottom elevation (z), Manning roughness (n) and initial conditions for water level (eta), x-velocity (u), y-velocity (v) (last two optional), and simple text files for the control file and boundary conditions. Outputs are also in raster format.
 
 The code makes use of the [Diffpack library](http://diffpack.de/), mostly concerning array definitions and indexing.
 
