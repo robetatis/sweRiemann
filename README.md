@@ -1,8 +1,11 @@
 # Godunov-type finite volume scheme for two-dimensional inviscid shallow water equations on a Cartesian grid
 
 Date: Jan. 31, 2018
+
 Dr.-Ing. Roberto Tatis-Muvdi
+
 Institute of Hydraulic Engineering and Technical Hydromechanics
+
 Technische Universität  Dresden
 
 ## General information:
