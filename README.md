@@ -31,7 +31,8 @@ The code makes use of the [Diffpack library](http://diffpack.de/), mostly concer
 
 ## Input files:
 
-### ASCII text files. These file names and extensions are user-defined.
+### Raster files
+These are ASCII text files containing the input arrays for the model. File names and extensions are user-defined. The model requires:
   - Terrain
   - Manning
   - Initial water level (for dry start, terrain file can be used)
@@ -51,6 +52,9 @@ The code makes use of the [Diffpack library](http://diffpack.de/), mostly concer
 *Note*: All the above files must have the same cell size, number of columns and number of rows. In its current version, the model does not check file formats, for instance, whether the information in the header corresponds to the actual size of the data matrix, or if the terrain, initial conditions and manning rasters have different number of columns, rows, cell size, etc.
 
 ### Text files
+
+These are ASCII text files describing the boundary conditions and the configuration of the model (control file, see below):
+
 - Boundary conditions: the model works with *open* (transmissive), *closed* (reflective), *discharge* or *water level* boundary conditions. 
 Since the model is raster-based, there are four domain boundaries: north (N), south (S), east (E) and west (W). Along each domain boundary there can be as many boundary segments of different types as required. For instance:
 
@@ -64,5 +68,23 @@ Keywords:
 - eta: water level boundary
 - open: open (transmissive) boundary
 
-![File format](https://github.com/robetatis/sweRiemann/blob/master/bcFile.png)
+The boundary conditions text file must have the following format:
+![Boundary condition file format](https://github.com/robetatis/sweRiemann/blob/master/bcFile.png)
 
+Each line in this file corresponds to a boundary segment. The first line must contain column names. This is simply a header for identfying columns. Columns are read and interpreted based on position, not name!
+
+Columns:
+
+- edge: can be N (north), S (south), E (east) or W (west). Indicates the location of the boundary segment.
+ start: the starting coordinate of the boundary segment. If this point does not coincide exactly with the position of a cell edge, the model automatically shifts it upwards or to the right (depending on whether the boundary segment is along a vertical or a horizontal domain edge).
+- end: the end coordinate of the desired boundary. If this point does not coincide exactly with the position of a cell edge, the model automatically shifts it upwards or to the right (depending on whether the boundary segment is along a vertical or a horizontal domain edge).
+- btype: boundary type. This simply indicates what is the variable contained in the boundary condition. As indicated in the keywords above, can be only “open”, “Q” or “eta”. These keywords are case sensitive! 
+- bvaluefile: this is the name of the file containing the discharge or water level time series for the corresponding boundary segment, i.e., the time series file. The model only works with boundary conditions in the form of time series. For steady inflow/outflow or water level, simply provide a flat time series. These file names and extensions are user-defined. In the example above, line 5 of the boundary conditions file:
+
+  S		45.104 		100.23		eta		eta.txt     
+
+points to file “eta.txt”. This file must also be in the same folder. Make sure to name the file exactly as indicated in the boundary conditions file. 
+
+The format for the time series file is very simple:
+
+![Time series file format](https://github.com/robetatis/sweRiemann/blob/master/bcTimeSeries.png)
