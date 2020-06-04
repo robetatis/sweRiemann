@@ -1,4 +1,4 @@
-# Godunov-type finite volume scheme for two-dimensional inviscid shallow water equations on a Cartesian grid
+# Godunov-type finite volume scheme for free-surface two-dimensional inviscid shallow water equations on a Cartesian grid
 
 Date: Jan. 31, 2018
 
