@@ -60,7 +60,8 @@ These are ASCII text files describing the boundary conditions and the configurat
 - Boundary conditions: the model works with *open* (transmissive), *closed* (reflective), *discharge* or *water level* boundary conditions. 
 Since the model is raster-based, there are four domain boundaries: north (N), south (S), east (E) and west (W). Along each domain boundary there can be as many boundary segments of different types as required. For instance:
 
-  ![Boundary segments](https://github.com/robetatis/sweRiemann/blob/master/bc.png). Blue: water level boundary segments, green: discharge boundary segments, black: closed boundary segments.
+  ![Boundary segments](https://github.com/robetatis/sweRiemann/blob/master/bc.png). 
+  Blue: water level boundary segments, green: discharge boundary segments, black: closed boundary segments.
 
   By default, all model boundaries are closed and only those segments indicated in the boundary conditions file will be either open, have a discharge or a water level. Information must be provided for open, discharge or water level boundaries. If nothing is entered, the corresponding model boundary is treated as closed. The keywords needed for this are (last column of boundary conditions file):
   - Q: flow boundary
@@ -113,5 +114,5 @@ The 1st line is simply a header, not used for identification. The 1st column con
   - vmagout: “yes” or “no” for controlling output of velocity magnitude, √(u2 + v2)
   - flowdout: “yes” or “no” for controlling output of flow direction in degrees
 
-# Demo - Dam break simulation over irregular terrain for testing wettin-drying scheme
+## Demo - Dam break simulation over irregular terrain for testing wettin-drying scheme
 ![](3hump.gif)
