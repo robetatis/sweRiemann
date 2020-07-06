@@ -1,8 +1,11 @@
 # Godunov-type finite volume scheme for 2d, free-surface, inviscid shallow water equations on a Cartesian grid
 
 Date: Jan. 31, 2018
+
 Dr.-Ing. Roberto Tatis-Muvdi
+
 Institute of Hydraulic Engineering and Technical Hydromechanics
+
 Technische Universität  Dresden
 
 ## Demo - Dam break simulation over irregular terrain for testing wettin-drying scheme
