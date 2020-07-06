@@ -23,6 +23,9 @@ The code makes use of the [Diffpack library](http://diffpack.de/), mostly concer
   swRiemann.exe
   pause
 
+## Demo - Dam break simulation over irregular terrain for testing wettin-drying scheme
+![](3hump.gif)
+
 ## Variables used in the model:
 - eta: Water level \[m\]
 - Q: discharge \[m<sup>3</sup>/s\]
@@ -113,6 +116,3 @@ The 1st line is simply a header, not used for identification. The 1st column con
   - uout: “yes” or “no” for controlling output of u-velocity component
   - vmagout: “yes” or “no” for controlling output of velocity magnitude, √(u2 + v2)
   - flowdout: “yes” or “no” for controlling output of flow direction in degrees
-
-## Demo - Dam break simulation over irregular terrain for testing wettin-drying scheme
-![](3hump.gif)
