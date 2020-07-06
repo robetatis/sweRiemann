@@ -1,12 +1,12 @@
 # Godunov-type finite volume scheme for 2d, free-surface, inviscid shallow water equations on a Cartesian grid
 
 Date: Jan. 31, 2018
-
 Dr.-Ing. Roberto Tatis-Muvdi
-
 Institute of Hydraulic Engineering and Technical Hydromechanics
-
 Technische Universität  Dresden
+
+## Demo - Dam break simulation over irregular terrain for testing wettin-drying scheme
+![](3hump.gif)
 
 ## General information:
 
@@ -22,9 +22,6 @@ The code makes use of the [Diffpack library](http://diffpack.de/), mostly concer
 - The model can be started through a batch file with the following content:
   swRiemann.exe
   pause
-
-## Demo - Dam break simulation over irregular terrain for testing wettin-drying scheme
-![](3hump.gif)
 
 ## Variables used in the model:
 - eta: Water level \[m\]
