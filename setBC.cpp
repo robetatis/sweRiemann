@@ -12,6 +12,8 @@
 #include <array>
 #include <supportFunct.cpp>
 
+# temp change
+
 // set boundary conditions according to BC file; default mode is closed boundary
 void setBC(dpreal& dx, dpreal& dy, dpreal& xll, dpreal& yll, int& nx, int& ny, dpreal& tstop,
 		   ArrayGen(dpreal)& u, ArrayGen(dpreal)& v, ArrayGen(dpreal)& h, ArrayGen(dpreal)& eta, ArrayGen(dpreal)& zb, ArrayGen(dpreal)& man,
